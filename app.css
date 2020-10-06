@@ -23,6 +23,7 @@ svg {
   position: absolute;
   letter-spacing: 5px;
   font-size: 1.5em;
+  text-align: center;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
