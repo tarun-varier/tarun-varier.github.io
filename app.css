@@ -42,8 +42,9 @@ svg {
           transform: translate(-150%, -50%);
 }
 
-.hide {
-  opacity: 0;
+.slow {
+  -webkit-animation: change-opaque 7s cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation: change-opaque 7s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @media only screen and (min-width: 700px) {
@@ -52,6 +53,252 @@ svg {
   }
   #center {
     font-size: 2.5em;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0px auto;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000000;
+  -webkit-animation: slide-out-container 4s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
+          animation: slide-out-container 4s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.text-wrapper {
+  color: white;
+  position: absolute;
+}
+
+.text {
+  font-family: Monument;
+  font-size: 54px;
+}
+
+.text-1,
+.text-3,
+.text-4,
+.text-8,
+.text-9,
+.text-11 {
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px white;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0%;
+  }
+  1% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0%;
+  }
+  1% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.text-1 {
+  -webkit-animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+          animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+  opacity: 0;
+}
+
+.text-2 {
+  -webkit-animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+          animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+  opacity: 0;
+}
+
+.text-3 {
+  -webkit-animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+          animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+  opacity: 0;
+}
+
+.text-4 {
+  -webkit-animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+          animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+  opacity: 0;
+}
+
+.text-5 {
+  -webkit-animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+          animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+  opacity: 0;
+}
+
+.text-6 {
+  -webkit-animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
+          animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
+  opacity: 0;
+}
+
+.text-7 {
+  -webkit-animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+          animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+  opacity: 0;
+}
+
+.text-8 {
+  -webkit-animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+          animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+  opacity: 0;
+}
+
+.text-9 {
+  -webkit-animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+          animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+  opacity: 0;
+}
+
+.text-10 {
+  -webkit-animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+          animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+  opacity: 0;
+}
+
+.text-11 {
+  -webkit-animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+          animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+  opacity: 0;
+}
+
+@-webkit-keyframes change-opaque {
+  90% {
+    opacity: 5%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes change-opaque {
+  90% {
+    opacity: 5%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    opacity: 0%;
+  }
+  1% {
+    opacity: 100%;
+  }
+  19% {
+    opacity: 100%;
+  }
+  20% {
+    opacity: 0%;
+  }
+  39% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  59% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  79% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 0%;
+  }
+  1% {
+    opacity: 100%;
+  }
+  19% {
+    opacity: 100%;
+  }
+  20% {
+    opacity: 0%;
+  }
+  39% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  59% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  79% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes slide-out-container {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0vh;
+  }
+}
+
+@keyframes slide-out-container {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0vh;
   }
 }
 /*# sourceMappingURL=app.css.map */
