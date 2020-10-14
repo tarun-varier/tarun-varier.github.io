@@ -1,9 +1,6 @@
-@font-face {
-  font-family: Monument;
-  src: url(MonumentExtended-Regular.otf);
-}
-
-html, body {
+@import url("https://fonts.cdnfonts.com/css/monument-extended");
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -31,7 +28,7 @@ svg {
 }
 
 #element {
-  font-family: Monument;
+  font-family: "Monument Extended";
 }
 
 #socials {
@@ -82,11 +79,12 @@ svg {
 .text-wrapper {
   color: white;
   position: absolute;
+  margin: auto;
 }
 
 .text {
-  font-family: Monument;
-  font-size: 54px;
+  font-family: "Monument Extended";
+  font-size: 2em;
 }
 
 .text-1,
@@ -160,8 +158,8 @@ svg {
 }
 
 .text-6 {
-  -webkit-animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
-          animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
+  -webkit-animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
+          animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
   opacity: 0;
 }
 
