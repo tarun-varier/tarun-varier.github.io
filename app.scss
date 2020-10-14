@@ -4,6 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 body {
   background-color: red;
@@ -53,7 +54,6 @@ svg {
   margin: 0px auto;
   position: absolute;
   display: flex;
-  overflow: hidden;
   justify-content: center;
   align-items: center;
   background: #000000;
