@@ -11,7 +11,7 @@
     />
     <title>Obama</title>
   </head>
-  <body>
+  <body class="preload">
     <svg
       class="slow"
       id="my-outline"
@@ -90,6 +90,9 @@
     crossorigin="anonymous"
   ></script>
   <script>
+    window.onload(() => {
+      document.querySelector("body").classList.remove("preload");
+    });
     var options = {
       strings: [
         "15 Y/O",
