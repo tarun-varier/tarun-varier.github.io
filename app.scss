@@ -11,13 +11,6 @@ body {
   overflow: hidden;
 }
 
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-
 body {
   background-color: red;
 }
@@ -30,18 +23,19 @@ svg {
 #center {
   position: absolute;
   letter-spacing: 5px;
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 10px;
 }
 #element {
   font-family: "Monument Extended";
 }
 
 #socials {
-  height: 150px;
+  height: 200px;
   position: absolute;
   top: 50%;
   left: 100%;
@@ -170,6 +164,16 @@ svg {
   }
   100% {
     opacity: 100%;
+  }
+}
+@keyframes border-appear {
+  60% {
+    border: 3px solid rgba($color: #000000, $alpha: 0.2);
+    box-shadow: 5px 10px rgba($color: #000000, $alpha: 0.2);
+  }
+  100% {
+    border: 3px solid rgba($color: #000000, $alpha: 1);
+    box-shadow: 5px 10px rgba($color: #000000, $alpha: 1);
   }
 }
 @keyframes slide-out {
