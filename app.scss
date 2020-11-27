@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  // filter: invert(1);
+  cursor: none;
 }
 
 html,
@@ -12,13 +14,23 @@ body {
 }
 
 body {
-  background-color: red;
+  // background-color: red;
+  background: url(https://media.giphy.com/media/3oEduMhFrYvKk4giac/giphy.gif)
+    no-repeat center center fixed;
+  // no-repeat 50% 50%;
+  background-size: cover;
 }
 svg {
   position: absolute;
   height: 42%;
   left: 0px;
   bottom: 0px;
+  color: #ffffff;
+  mix-blend-mode: difference;
+}
+path {
+  color: #ffffff;
+  mix-blend-mode: difference;
 }
 #center {
   position: absolute;
@@ -29,6 +41,8 @@ svg {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
+  mix-blend-mode: difference;
+  color: white;
 }
 #element {
   font-family: "Monument Extended";
@@ -41,7 +55,11 @@ svg {
   left: 100%;
   transform: translate(-150%, -50%);
 }
-
+#my-outline > path {
+  stroke: #ffffff;
+  stroke-width: 9px;
+  mix-blend-mode: difference;
+}
 .slow {
   animation: change-opaque 7s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -63,6 +81,8 @@ svg {
   justify-content: center;
   align-items: center;
   background: #000000;
+  mix-blend-mode: normal;
+  // background: rgba(0, 0, 0, 0);
   animation: slide-out-container 4s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
   animation-fill-mode: forwards;
 }
@@ -168,12 +188,12 @@ svg {
 }
 @keyframes border-appear {
   60% {
-    border: 3px solid rgba($color: #000000, $alpha: 0.2);
-    box-shadow: 5px 10px rgba($color: #000000, $alpha: 0.2);
+    border: 3px solid rgba($color: #ffffff, $alpha: 0.2);
+    box-shadow: 5px 10px rgba($color: #ffffff, $alpha: 0.2);
   }
   100% {
-    border: 3px solid rgba($color: #000000, $alpha: 1);
-    box-shadow: 5px 10px rgba($color: #000000, $alpha: 1);
+    border: 3px solid rgba($color: #ffffff, $alpha: 1);
+    box-shadow: 5px 10px rgba($color: #ffffff, $alpha: 1);
   }
 }
 @keyframes slide-out {
@@ -225,4 +245,68 @@ svg {
   100% {
     height: 0vh;
   }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -9px;
+  left: -9px;
+  animation: cursorAnim2 0.5s infinite alternate;
+  mix-blend-mode: normal;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 0.5s forwards;
+  border: 1px solid red;
+  mix-blend-mode: normal;
 }
