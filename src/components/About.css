@@ -1,0 +1,142 @@
+.about {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-secondary);
+  position: relative;
+  z-index: 2;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-text {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-md);
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-description:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-philosophy {
+  color: var(--text-muted);
+  font-style: italic;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent);
+  text-align: left;
+  max-width: 680px;
+  margin-top: var(--space-lg);
+}
+
+/* Skills */
+.skills {
+  margin-top: var(--space-2xl);
+}
+
+.skills h3 {
+  font-size: 1.4rem;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.skill-category {
+  padding: var(--space-sm) 0;
+}
+
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.skill-category-icon {
+  color: var(--accent);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-tag {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--border-radius-lg);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+}
+
+.skill-tag:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.15);
+}
+
+.skill-icon {
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: var(--space-2xl) 0;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .about-philosophy {
+    padding-left: 1rem;
+  }
+
+  .skills-grid {
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .skill-category-header {
+    font-size: 0.8rem;
+  }
+}
