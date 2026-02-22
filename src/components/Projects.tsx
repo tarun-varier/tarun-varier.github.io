@@ -1,9 +1,10 @@
 import React, { useRef, useState, useCallback } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact } from 'react-icons/fa';
 import {
   SiTypescript, SiNextdotjs, SiTailwindcss, SiLangchain,
-  SiCplusplus, SiPython, SiTensorflow,
+  SiCplusplus, SiPython, SiTensorflow, SiThreedotjs, SiSupabase,
+  SiDjango,
 } from 'react-icons/si';
 import { HiCodeBracket } from 'react-icons/hi2';
 import { staggerContainer, fadeInUp, projectCardVariant } from '../utils/animations';
@@ -40,20 +41,38 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'SaaS Platform',
+    title: 'Quintessence Pens',
     description:
-      'Platform connecting businesses and content creators through innovative collaboration and discovery tools.',
+      'Luxury fountain pen e-commerce platform featuring an interactive 3D configurator and comprehensive superadmin management dashboard.',
     problem:
-      'Traditional creator-business partnerships lack efficient discovery and management systems. This platform reimagines how they connect.',
+      'Luxury pen customization needed real-time 3D visualization with complete production tracking. Built with Three.js for immersive user experience.',
     technologies: [
       { name: 'Next.js', icon: <SiNextdotjs /> },
+      { name: 'React 19', icon: <FaReact /> },
+      { name: 'Three.js', icon: <SiThreedotjs /> },
       { name: 'Tailwind', icon: <SiTailwindcss /> },
-      { name: 'Python', icon: <SiPython /> },
+      { name: 'Supabase', icon: <SiSupabase /> },
     ],
-    status: 'active',
+    githubUrl: 'https://github.com/Madhav-000-s/quintessence-pens',
+    status: 'completed',
   },
   {
     id: 3,
+    title: 'Donation Management System',
+    description:
+      'Platform connecting donors with those in need during natural disasters, enabling seamless donation of supplies and funds to local centers.',
+    problem:
+      'During disasters, coordinating donations is chaotic. This system provides location tracking, pickup scheduling, and shipment management between centers.',
+    technologies: [
+      { name: 'React', icon: <FaReact /> },
+      { name: 'Django', icon: <SiDjango /> },
+      { name: 'Material UI' },
+    ],
+    githubUrl: 'https://github.com/elhanbthomas/DONATION-MANAGEMENT',
+    status: 'completed',
+  },
+  {
+    id: 4,
     title: 'CARDIA',
     description:
       'Parallelized ECG signal analysis pipeline using the Pan-Tompkins algorithm for real-time heart rate detection.',
@@ -68,7 +87,7 @@ const projects: Project[] = [
     status: 'completed',
   },
   {
-    id: 4,
+    id: 5,
     title: 'GENRAI',
     description:
       'Machine learning model for music genre classification using audio feature extraction and neural networks.',
@@ -83,7 +102,7 @@ const projects: Project[] = [
     status: 'completed',
   },
   {
-    id: 5,
+    id: 6,
     title: 'wa-botr',
     description:
       'Framework for creating WhatsApp bots using configurable triggers and automated responses.',
@@ -151,7 +170,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="project-header">
           <h3 className="project-title">{project.title}</h3>
           <span className={`project-status ${project.status}`}>
-            {project.status === 'active' ? 'In Development' : 'Completed'}
+            {project.status === 'active' ? '[In Development]' : '[Completed]'}
           </span>
         </div>
 
@@ -181,7 +200,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               aria-label={`View ${project.title} on GitHub`}
             >
               <FaGithub />
-              <span>Source Code</span>
+              <span>[Source Code]</span>
             </motion.a>
           )}
           {project.liveUrl && (
@@ -194,11 +213,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               aria-label={`View ${project.title} live demo`}
             >
               <FaExternalLinkAlt />
-              <span>Live Demo</span>
+              <span>[Live Demo]</span>
             </motion.a>
           )}
           {!project.githubUrl && !project.liveUrl && (
-            <span className="project-link-private">Private Repository</span>
+            <span className="project-link-private">[Private Repository]</span>
           )}
         </div>
       </div>

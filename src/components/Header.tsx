@@ -4,9 +4,9 @@ import { useActiveSection } from '../hooks/useScrollPosition';
 import './Header.css';
 
 const navItems = [
-  { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'about', label: '[ABOUT]' },
+  { id: 'projects', label: '[PROJECTS]' },
+  { id: 'contact', label: '[CONTACT]' },
 ];
 
 const Header: React.FC = () => {

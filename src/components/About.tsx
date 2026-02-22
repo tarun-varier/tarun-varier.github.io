@@ -101,8 +101,8 @@ const About: React.FC = () => {
 
             <motion.p className="about-description" variants={fadeInUp}>
               Today, I'm working on Lattice, a VSCode extension that accelerates
-              LLM-based front-end development, and a SaaS platform connecting
-              businesses and content creators in innovative ways. Each product I
+              LLM-based front-end development, and exploring new ways to build
+              products that solve real problems for real people. Each project I
               build teaches me something new, and that continuous learning fuels
               my passion.
             </motion.p>
@@ -127,7 +127,7 @@ const About: React.FC = () => {
                 >
                   <div className="skill-category-header">
                     <span className="skill-category-icon">{category.icon}</span>
-                    <span className="skill-category-label">{category.label}</span>
+                    <span className="skill-category-label">[{category.label}]</span>
                   </div>
                   <motion.div
                     className="skills-grid"

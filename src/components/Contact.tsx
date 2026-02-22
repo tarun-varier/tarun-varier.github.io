@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
             >
               <HiEnvelope className="contact-email-icon" />
               <div className="contact-email-text">
-                <span className="contact-email-label">Say hello</span>
+                <span className="contact-email-label">[Say hello]</span>
                 <span className="contact-email-address">t4runv4rier@gmail.com</span>
               </div>
             </motion.a>
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
                   aria-label={`${link.name}: ${link.label}`}
                 >
                   <span className="social-link-icon">{link.icon}</span>
-                  <span className="social-link-name">{link.name}</span>
+                  <span className="social-link-name">[{link.name}]</span>
                 </motion.a>
               ))}
             </motion.div>

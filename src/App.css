@@ -8,19 +8,19 @@
 :root {
   /* Color Palette - Refined Warm Tones */
   --bg-primary: #1A1918;
-  --bg-secondary: #2D2926;
-  --bg-tertiary: #3F3835;
+  --bg-secondary: #1A1918;
+  --bg-tertiary: #252220;
   --text-primary: #FAF8F3;
-  --text-secondary: #D4CFC7;
-  --text-muted: #A39C92;
-  --accent: #FF6B35;
-  --accent-hover: #E85D2C;
+  --text-secondary: #E8E1D8;
+  --text-muted: #D4CFC7;
+  --accent: #FF8C42;
+  --accent-hover: #FFA366;
   --accent-secondary: #F77F00;
   --accent-tertiary: #D62828;
   --success: #06FFA5;
-  --border: #3F3835;
+  --border: #3A3330;
   --shadow: rgba(0, 0, 0, 0.4);
-  --shadow-accent: rgba(255, 107, 53, 0.25);
+  --shadow-accent: rgba(255, 140, 66, 0.25);
   
   /* Typography */
   --font-primary: 'JetBrains Mono', monospace;
@@ -36,9 +36,9 @@
   --space-3xl: 8rem;
   
   /* Borders */
-  --border-radius: 8px;
-  --border-radius-lg: 12px;
-  --border-radius-xl: 16px;
+  --border-radius: 2px;
+  --border-radius-lg: 3px;
+  --border-radius-xl: 4px;
   
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,10 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: var(--space-lg);
   text-align: center;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
 }
 
 /* Buttons */

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { heroStagger, heroItem, letterAnimation, scrollIndicator } from '../utils/animations';
 import { HiArrowDown } from 'react-icons/hi2';
 import './Hero.css';
+import Dither from './Dither'
 
 const Hero: React.FC = () => {
   const nameLetters = 'Tarun Varier'.split('');
@@ -24,8 +25,19 @@ const Hero: React.FC = () => {
   return (
     <section className="hero" id="hero">
       {/* Animated background gradient */}
-      <div className="hero-bg-gradient" />
+<div className="hero-bg-gradient">
+  <Dither
+    waveColor={[1.0, 0.47, 0.0]}
+    disableAnimation={false}
+    enableMouseInteraction
+    mouseRadius={0.1}
+    colorNum={4}
+    waveAmplitude={0.3}
+    waveFrequency={3}
+    waveSpeed={0.05}
+  />
 
+</div>
       <motion.div
         className="hero-content"
         variants={heroStagger}
@@ -50,7 +62,7 @@ const Hero: React.FC = () => {
         </motion.h1>
 
         <motion.p className="hero-subtitle" variants={heroItem}>
-          Maker & Developer
+          [MAKER] [DEVELOPER]
         </motion.p>
 
         <motion.p className="hero-description" variants={heroItem}>
