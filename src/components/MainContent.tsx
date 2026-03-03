@@ -77,7 +77,7 @@ const designWork = [
 
 export default function MainContent() {
   return (
-    <main className="mx-auto min-h-screen py-16 px-12 lg:ml-[400px] min-[1600px]:ml-auto max-lg:px-6 max-lg:py-10">
+    <main className="mx-auto min-h-screen py-16 px-12 lg:ml-[400px] xl:mr-[400px] min-[1600px]:ml-auto max-lg:px-6 max-lg:py-10">
       <div className="max-w-3xl mx-auto">
         {/* Projects */}
         <section className="mb-20">

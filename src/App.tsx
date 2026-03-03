@@ -1,13 +1,16 @@
 import "./index.css";
-import Sidebar from "./components/Sidebar";
-import MainContent from "./components/MainContent";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Hellos from "./pages/Hellos";
 
 function App() {
   return (
-    <div className="min-h-screen bg-bg flex max-lg:flex-col">
-      <Sidebar />
-      <MainContent />
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/hellos" element={<Hellos />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
