@@ -64,10 +64,8 @@ export default function Sidebar() {
         </div>
 
         {/* Bio */}
-        <p className="text-text text-sm leading-relaxed mb-4 max-lg:max-w-md">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a
-          turpis id metus interdum consectetur. Nunc vitae dictum lacus. Integer
-          ac
+        <p className="text-text text-sm italic leading-relaxed mb-4 max-lg:max-w-md">
+          Shipping products that people can't live without
         </p>
 
         {/* Social Icons */}
